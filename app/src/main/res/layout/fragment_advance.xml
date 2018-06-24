@@ -3,14 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".InboxFragment">
+    tools:context=".menu.AdvanceFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center_horizontal"
-        android:text="Inbox Fragment"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
+    <ListView
+        android:id="@+id/ad_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 </FrameLayout>

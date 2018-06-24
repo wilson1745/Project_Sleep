@@ -1,4 +1,4 @@
-package e.wilso.project_sleep;
+package e.wilso.project_sleep.menu;
 
 
 import android.os.Bundle;
@@ -7,6 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import e.wilso.project_sleep.MainActivity;
+import e.wilso.project_sleep.R;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -20,8 +22,7 @@ public class HomeFragment extends Fragment {
 
 
    @Override
-   public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                            Bundle savedInstanceState) {
+   public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
       ((MainActivity)getActivity()).setActionBartTitle("Home");
 

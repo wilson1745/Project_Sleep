@@ -11,8 +11,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import e.wilso.project_sleep.menu.Memo;
+import e.wilso.project_sleep.menu.AdvanceFragment;
+import e.wilso.project_sleep.menu.HomeFragment;
 import e.wilso.project_sleep.menu.SettingActivity;
+import e.wilso.project_sleep.menu.TrendFragment;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -23,6 +25,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
    private ActionBarDrawerToggle toggle;
    private NavigationView navigationView;
    private android.support.v4.app.FragmentTransaction ft;
+
+   private final String TAG = "MainActivity";
 
    @Override
    protected void onCreate(Bundle savedInstanceState) {
@@ -43,20 +47,23 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
       // Handle navigation view item clicks here.
       int id = item.getItemId();
 
-      if(id == R.id.nav_memo) {
-         intent = new Intent(this, Memo.class);
-         startActivity(intent);
-      }
-      else if (id == R.id.nav_home) {
+      if (id == R.id.nav_home) {
          android.support.v4.app.FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
          ft.replace(R.id.flMain, new HomeFragment());
          ft.commit();
       }
-      else if (id == R.id.nav_inbox) {
+      else if (id == R.id.nav_trend) {
          android.support.v4.app.FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-         ft.replace(R.id.flMain, new InboxFragment());
+         ft.replace(R.id.flMain, new TrendFragment());
          ft.commit();
       }
+      else if (id == R.id.nav_advance) {
+         android.support.v4.app.FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
+         ft.replace(R.id.flMain, new AdvanceFragment());
+         ft.commit();
+      }
+
+
       else if (id == R.id.nav_setting) {
          intent = new Intent(this, SettingActivity.class);
          startActivity(intent);
