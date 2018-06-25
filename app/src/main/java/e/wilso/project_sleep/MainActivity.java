@@ -8,8 +8,11 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+
+
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 
 import e.wilso.project_sleep.menu.AdvanceFragment;
 import e.wilso.project_sleep.menu.HomeFragment;
@@ -39,6 +42,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
       makeFramentTransaction();
 
       navigationView.setCheckedItem(R.id.nav_home);
+
    }
 
    @SuppressWarnings("StatementWithEmptyBody")
@@ -54,12 +58,12 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
       }
       else if (id == R.id.nav_trend) {
          android.support.v4.app.FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-         ft.replace(R.id.flMain, new TrendFragment());
+         ft.replace(R.id.flMain, new TrendFragment()).addToBackStack(null);
          ft.commit();
       }
       else if (id == R.id.nav_advance) {
          android.support.v4.app.FragmentTransaction ft = getSupportFragmentManager().beginTransaction();
-         ft.replace(R.id.flMain, new AdvanceFragment());
+         ft.replace(R.id.flMain, new AdvanceFragment()).addToBackStack(null);
          ft.commit();
       }
 
