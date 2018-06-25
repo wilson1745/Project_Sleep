@@ -1,5 +1,6 @@
 package e.wilso.project_sleep.menu;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -18,6 +19,9 @@ import java.util.List;
 import e.wilso.project_sleep.AdapterTool.ToolMenuAdapter;
 import e.wilso.project_sleep.MainActivity;
 import e.wilso.project_sleep.R;
+import e.wilso.project_sleep.advance.EmailActivity;
+import e.wilso.project_sleep.advance.LanguageActivity;
+import e.wilso.project_sleep.advance.PersonalActivity;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -27,6 +31,8 @@ public class AdvanceFragment extends Fragment {
    private View view;
    private ListView listView;
    private ArrayAdapter adapter;
+
+   private Intent intent;
 
    public AdvanceFragment() {
       // Required empty public constructor
@@ -53,15 +59,21 @@ public class AdvanceFragment extends Fragment {
                   Toast.makeText(getActivity(), "Memo", Toast.LENGTH_SHORT).show();
                   break;
                case 1:
+                  intent = new Intent(getActivity(), PersonalActivity.class);
+                  startActivity(intent);
                   Toast.makeText(getActivity(), "Personal Information", Toast.LENGTH_SHORT).show();
                   break;
                case 2:
                   Toast.makeText(getActivity(), "Output Result", Toast.LENGTH_SHORT).show();
                   break;
                case 3:
+                  intent = new Intent(getActivity(), LanguageActivity.class);
+                  startActivity(intent);
                   Toast.makeText(getActivity(), "Languages", Toast.LENGTH_SHORT).show();
                   break;
                case 4:
+                  intent = new Intent(getActivity(), EmailActivity.class);
+                  startActivity(intent);
                   Toast.makeText(getActivity(), "Feedback", Toast.LENGTH_SHORT).show();
                   break;
             }
