@@ -29,7 +29,8 @@
         <activity android:name=".advance.LanguageActivity" />
         <activity android:name=".advance.EmailActivity" />
         <activity android:name=".advance.PersonalActivity" />
-        <activity android:name=".AlarmActivity"></activity>
+        <activity android:name=".AlarmActivity" />
+        <activity android:name=".LightTestActivity"></activity>
     </application>
 
 </manifest>
