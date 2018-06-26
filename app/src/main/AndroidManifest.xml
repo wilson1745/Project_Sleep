@@ -28,7 +28,8 @@
         </activity>
         <activity android:name=".advance.LanguageActivity" />
         <activity android:name=".advance.EmailActivity" />
-        <activity android:name=".advance.PersonalActivity"></activity>
+        <activity android:name=".advance.PersonalActivity" />
+        <activity android:name=".AlarmActivity"></activity>
     </application>
 
 </manifest>
